@@ -23,8 +23,8 @@ class SearchForm extends Component {
     render() {
         return (
             <Consumer>
-                {context => {
-                    const filterCourses = context.actions.filterCourses;
+                {({actions}) => {
+                    const filterCourses = actions.filterCourses;
                     this.callback = () => filterCourses(this.state.searchItem);
                     return (
                         <form>

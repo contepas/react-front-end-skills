@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import server_response from '../../fakeData'
+import server_response from '../../fakeData';
 
 
 const SearchCoursesContext = React.createContext(null);

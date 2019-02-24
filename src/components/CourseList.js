@@ -6,15 +6,14 @@ class CourseList extends Component {
     render() {
         return(
             <Consumer>
-                {context => {
-                    const courses = context.matches
-                    const totalMatches = courses.length;
+                {({matches}) => {
+                    const totalMatches = matches.length;
                     return (
                         <div id="course-list">
                         <p>{`I got ${totalMatches} matches`}</p>                    
                         <ul>
                             <React.Fragment>
-                                {courses.map( course =>
+                                {matches.map( course =>
                                     <li key={course.id.toString()}>{course.title}</li>
                                 )}
                             </React.Fragment>
