@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {Consumer} from './Context'
+import {Consumer} from './Context';
+import Course from './Course';
 
 class CourseList extends Component {
  
@@ -12,9 +13,9 @@ class CourseList extends Component {
                         <div id="course-list">
                         <p>{`I got ${totalMatches} matches`}</p>                    
                         <ul>
-                            <React.Fragment>
-                                {matches.map( course =>
-                                    <li key={course.id.toString()}>{course.title}</li>
+                            <React.Fragment> 
+                                {matches.map( course => 
+                                    <Course key={course.id.toString()} course={course}/>
                                 )}
                             </React.Fragment>
                         </ul>

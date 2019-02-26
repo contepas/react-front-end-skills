@@ -14,7 +14,7 @@ class SearchForm extends Component {
     handleKeyPress = (event) => {
         if(event.key === 'Enter'){
             event.preventDefault()
-            this.callback(this.state.searchItem)
+            this.filterCourses(this.state.searchItem)
             this.setState({searchItem: ''})
         }
     }
@@ -25,7 +25,7 @@ class SearchForm extends Component {
             <Consumer>
                 {({actions}) => {
                     const filterCourses = actions.filterCourses;
-                    this.callback = () => filterCourses(this.state.searchItem);
+                    this.filterCourses = () => filterCourses(this.state.searchItem);
                     return (
                         <form>
                             <input

@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,4 +11,113 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+/* ================================= 
+  WEB FONTS
+==================================== */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700);
+
+/* ================================= 
+  ELEMENT STYLES
+==================================== */
+
+body {
+  color: #576366;
+  background: #5fcf80;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
 }
+h1,
+h2,
+ul {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  color: #404040;
+  font-size: 1.6em;
+  margin-bottom: 1.25em;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #3b80d1;
+}
+hr {
+  border: 0;
+  height: 0;
+  margin: 2.3em 0 2em 0;
+  border-top: 1px solid rgba(0, 0, 0, .1);
+}
+
+/* FORM & BUTTON STYLES -------- */
+
+
+
+/* ================================= 
+  LAYOUT & PAGE STYLES
+==================================== */
+
+.container {
+  width: 95%;
+  max-width: 780px;
+  padding-bottom: 2em;
+  margin: 2em auto ;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+  overflow: hidden;
+}
+
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  background: #edeff0;
+  margin-bottom: 2em;
+}
+
+header span {
+  text-align: center;
+}
+
+/* Main Nav -------- */
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.main-nav a {
+  font-size: .90em;
+  color: rgb(150, 150, 150);
+  text-align: center;
+  text-transform: uppercase;
+  transition: .2s;
+  padding-left: 10px;
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  color: rgb(201, 201, 201);
+  font-size: 1em;
+}
+
+/* COURSE FINDER */
+.course-finder {
+  padding: 1em 2em;
+}
+
+
+
+/* ================================= 
+  MEDIA QUERIES
+==================================== */
+
