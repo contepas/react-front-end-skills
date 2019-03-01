@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Consumer} from '../Context';
 import Course from './Course';
 
-class CourseList extends Component {
+class Courses extends Component {
  
     render() {
         return(
@@ -31,4 +31,4 @@ class CourseList extends Component {
     }
 }
 
-export default CourseList
+export default Courses

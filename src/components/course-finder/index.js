@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Consumer} from '../Context';
 import SearchForm from './SearchForm';
-import CourseList from './CourseList';
+import CourseList from './Courses';
 import Subjects from './Subjects';
 
 class CourseFinder extends Component {

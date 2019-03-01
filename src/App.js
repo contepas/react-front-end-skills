@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter, Route, Switch} from 'react-router-dom';
-import CourseFinder from './components/courses/CourseFinder';
-import Game from './components/game/Game';
+import CourseFinder from './components/course-finder';
+import Game from './components/game';
 import Header from './components/Header';
 import NotFound from './components/NotFound';
 import ErrorBoudary from './components/ErrorBoundary';
