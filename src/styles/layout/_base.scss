@@ -1,0 +1,97 @@
+// ================================= 
+//  LAYOUT & PAGE STYLES
+// =================================
+
+.container {
+  width: 95%;
+  max-width: 780px;
+  padding-bottom: 2em;
+  margin: 2em auto ;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+  overflow: hidden;
+}
+  
+/* HEADER */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 2em;
+  color: #fff;
+  background: #ABD9EC;
+  margin-bottom: 2em;
+}
+
+/* Main Nav -------- */
+
+
+.main-nav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-self: center;
+  align-items: baseline;
+  a {
+    color: #fff;
+    font-size: 1.20em;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .2s;
+    padding-left: 10px;
+  }
+  li {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.main-nav a:hover,
+.main-nav .active {
+  font-size: 1.5em;
+}
+
+/* FORM */
+
+form input{
+  margin-right: 5px;
+}
+
+/* COURSE FINDER */
+.course-finder {
+  padding: 1em 2em;
+  width: 90%;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.course {
+  flex-grow: 1;
+  width: 40%;
+  border: 1px solid pink;
+  padding: 10px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  p {
+    font-size: 0.8em;
+  }
+}
+
+.subjects {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.subject {
+  border: 1px lightgray solid;
+  font-size: 0.7em;
+  width: 10%;
+  padding: 5px;
+  height: 25px;
+}

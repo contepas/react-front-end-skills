@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Consumer} from './Context'
+import {Consumer} from '../Context'
 
 class SearchForm extends Component {
 
@@ -11,11 +11,11 @@ class SearchForm extends Component {
         this.setState({searchItem: e.target.value})
     }
 
-    handleKeyPress = (event) => {
+    searchSubject = (event, filterCourses) => {
         if(event.key === 'Enter'){
-            event.preventDefault()
-            this.filterCourses(this.state.searchItem)
-            this.setState({searchItem: ''})
+            event.preventDefault();
+            filterCourses(this.state.searchItem);
+            this.setState({searchItem: ''});
         }
     }
       
@@ -25,7 +25,6 @@ class SearchForm extends Component {
             <Consumer>
                 {({actions}) => {
                     const filterCourses = actions.filterCourses;
-                    this.filterCourses = () => filterCourses(this.state.searchItem);
                     return (
                         <form>
                             <input
@@ -33,12 +32,12 @@ class SearchForm extends Component {
                                 value= {this.state.searchItem}
                                 onChange= {this.handleValueChange}
                                 placeholder= "Ex. JavaScript, Python"
-                                onKeyPress= {this.handleKeyPress}
+                                onKeyPress= {(e) => this.searchSubject(e, filterCourses)}
                             />
                             <input
                                 type= "button"
                                 value= "Search"
-                                onClick= {this.callback}
+                                onClick= {() => filterCourses(this.state.searchItem)}
                             />
                         </form>
                     )
