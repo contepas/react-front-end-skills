@@ -35,6 +35,7 @@ class SearchForm extends Component {
                                 onKeyPress= {(e) => this.searchSubject(e, filterCourses)}
                             />
                             <input
+                                className= "button"
                                 type= "button"
                                 value= "Search"
                                 onClick= {() => filterCourses(this.state.searchItem)}

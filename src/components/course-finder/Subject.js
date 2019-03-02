@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Subject = (props) => (
-  <button type="button" onClick={() => props.deleteCourses(props.subject)}>
+  <button className="subject" type="button" onClick={() => props.deleteCourses(props.subject)}>
     {props.subject}
   </button>
 );

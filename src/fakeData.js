@@ -34,7 +34,7 @@ const server_response = {
             source: "TeamTreeHouse",
             url: "http://teamTreeHouse.com/python_advanced",
             summary: "This is the course summary.",
-            keys: ["python"],
+            keys: ["python", "py"],
             earned_date: ""
         },
         {   id: 5,
@@ -43,6 +43,30 @@ const server_response = {
             url: "http://teamTreeHouse.com/machine_learning",
             summary: "This is the course summary.",
             keys: ["machine learning"],
+            earned_date: ""
+        },
+        {   id: 6,
+            title: "Pandas Basics",
+            source: "TeamTreeHouse",
+            url: "http://teamTreeHouse.com/machine_learning",
+            summary: "This is the course summary.",
+            keys: ["python", "py", "pandas"],
+            earned_date: ""
+        },
+        {   id: 7,
+            title: "Express Basics",
+            source: "TeamTreeHouse",
+            url: "http://teamTreeHouse.com/machine_learning",
+            summary: "This is the course summary.",
+            keys: ["javascript", "js", "express"],
+            earned_date: ""
+        },
+        {   id: 8,
+            title: "Data Science Basics",
+            source: "TeamTreeHouse",
+            url: "http://teamTreeHouse.com/machine_learning",
+            summary: "This is the course summary.",
+            keys: ["data science"],
             earned_date: ""
         },
     ]
