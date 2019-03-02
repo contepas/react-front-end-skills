@@ -9,10 +9,13 @@ class Game extends Component {
   }
 
   generateCoins = max => {
+    const order = this.generateRandomArray(6)
+    console.log(order)
     const coins = [];
-    for (let i=1; i<=max; i++){
-      coins.push({name: i, isVisible: true})
+    for (let i=0; i<max; i++){
+      coins.push({name: order[i], isVisible: true})
     }
+    console.log(coins)
     return coins
   }
 
@@ -42,7 +45,6 @@ class Game extends Component {
           <React.Fragment>
             <GameBoard 
               coins = {this.generateCoins(6)}
-              order = {this.generateRandomArray(6)}
             />
             <a 
               href="https://contepas.github.io/four-in-a-row/" 

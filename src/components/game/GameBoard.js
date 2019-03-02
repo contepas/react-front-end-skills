@@ -51,10 +51,10 @@ class GameBoard extends Component {
                     }
                 })
             } else {
-                console.log('Game Over')
-                this.restartGame();
                 //we didn't get the right order
                 //render restartGame();
+                console.log('Game Over')
+                this.restartGame();
                 return false;
             }
         } else {
