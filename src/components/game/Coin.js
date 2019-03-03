@@ -23,9 +23,8 @@ const Coin = props => (
 
 
 Coin.propTypes = {
-    id: PropTypes.number,
-    isVisible: PropTypes.bool,
-    getCoin: PropTypes.func
+    isVisible: PropTypes.bool.isRequired,
+    getCoin: PropTypes.func.isRequired
 };
 
 export default Coin;

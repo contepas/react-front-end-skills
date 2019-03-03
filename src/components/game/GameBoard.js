@@ -7,7 +7,7 @@ export default class GameBoard extends Component {
     state = {
         nextItem: null,
         matches: 0,
-        coins: this.props.coins
+        coins: this.props.coins()
     }
 
     static propTypes = {
@@ -16,6 +16,28 @@ export default class GameBoard extends Component {
             name: PropTypes.number
         })),
     };
+
+
+    /**
+     * sets all states back to the origin
+     */
+    restartGame = (hard) => {
+        if (!hard) {
+            this.setState(prevState => ({
+                nextItem: null,
+                matches: 0,
+                coins: prevState.coins.map(
+                    coin => Object.assign(coin, { isVisible: true })
+                )
+            }));
+        } else{
+            this.setState(prevState => ({
+                nextItem: null,
+                matches: 0,
+                coins: this.props.coins()
+            }));
+        }
+    }
 
 
     /**
@@ -42,20 +64,6 @@ export default class GameBoard extends Component {
 
 
     /**
-     * sets all states back to the origin
-     */
-    restartGame = () => {
-        this.setState(prevState => ({
-            nextItem: null,
-            matches: 0,
-            coins: prevState.coins.map(
-                coin => Object.assign(coin, { isVisible: true })
-            )
-        }));
-    }
-
-
-    /**
      * @param {number} id - name of the coin
      * If the id is the next number in the line:
      *      set nextItem to the next number in the line
@@ -66,7 +74,7 @@ export default class GameBoard extends Component {
     checkForGoodMove = id => {
         let nextItem = this.state.nextItem;
         if ((id !== nextItem) && nextItem) {
-            this.restartGame();
+            this.restartGame(false);
             return false;
         } else {
             this.setState(prevState => {
@@ -85,16 +93,15 @@ export default class GameBoard extends Component {
             return (
                 <div className="you-win">
                     <h1>You win!</h1>
-                    <button onClick={this.restartGame}>Restart</button>
+                    <button onClick={() => this.restartGame(true)}>Restart</button>
                 </div>
             )
         }
         return (
             <React.Fragment>
-                {this.props.coins.map((coin, index) => 
+                {this.state.coins.map((coin, index) => 
                     <Coin 
                         key={index}
-                        id={coin.name}
                         isVisible={coin.isVisible}
                         getCoin={() => this.getCoin(coin)} 
                     />)}        
