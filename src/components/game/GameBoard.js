@@ -35,25 +35,21 @@ class GameBoard extends Component {
     }
 
     checkForGoodMove = (id) => {
-        console.log(this.props.order)
         let nextItem = this.state.nextItem;
-        console.log(`nextItem: ${nextItem} - id: ${id} - matches: ${this.state.matches}`)
         if (nextItem){
             //If we got already the first coin
             if (id === nextItem){
                 //If we got the next coin in the right order
                 this.setState(prevState => {
                     nextItem = (nextItem %6) + 1;
-                    console.log(`veryNext item:${nextItem}` )
                     return {
                         nextItem: nextItem,
                         matches: prevState.matches +1,
                     }
                 })
             } else {
-                //we didn't get the right order
-                //render restartGame();
-                console.log('Game Over')
+                //We didn't get the right order
+                //restart game;
                 this.restartGame();
                 return false;
             }
@@ -83,7 +79,6 @@ class GameBoard extends Component {
                     key={index}
                     id={coin.name}
                     isVisible={coin.isVisible}
-                    //reset= {this.state.reset}
                     getCoin={() => this.getCoin(coin)} 
                     />)}        
             </React.Fragment>
