@@ -2,30 +2,21 @@
 //  Base Styles
 // ======================================
 
-
 body {
   color: #576366;
   background: #4FB848;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
-h1,
-h2,
+
 ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
 }
-h2 {
-  color: #404040;
-  font-size: 1.6em;
-  margin-bottom: 1.25em;
-}
-ul {
-  list-style-type: none;
-}
 a {
   text-decoration: none;
-  color: #3b80d1;
+  color: #4FB848;
 }
 hr {
   border: 0;
@@ -35,3 +26,13 @@ hr {
 }
 
 
+.container {
+  width: 95%;
+  max-width: 780px;
+  padding-bottom: 2em;
+  margin: 2em auto ;
+  background: #fff;
+  border-radius: .5em;
+  box-shadow: 0 3px rgba(0,0,0, .1);
+  overflow: hidden;
+}

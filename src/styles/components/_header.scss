@@ -1,0 +1,41 @@
+// ======================================
+//  Header Component
+// ======================================
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 2em;
+    color: #fff;
+    background: #ABD9EC;
+    margin-bottom: 2em;
+  }
+  
+  /* Main Nav -------- */
+  
+  .main-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-self: center;
+    align-items: baseline;
+    a {
+      color: #fff;
+      font-size: 1.20em;
+      text-align: center;
+      text-transform: uppercase;
+      transition: .2s;
+      padding-left: 10px;
+    }
+    li {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  
+  .main-nav a:hover,
+  .main-nav .active {
+    font-size: 1.5em;
+  }
+  
+  

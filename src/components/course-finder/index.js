@@ -15,8 +15,8 @@ class CourseFinder extends Component {
             return (
               <div className="course-finder">
                 <div className="course-finder-head">
-                  <h3>Look at my JavaScript related courses!</h3>
-                  <p>Or type a skill, to see more</p> 
+                  <h3>Look trought my Courses!</h3>
+                  <p>Type a skill, and press enter to see more</p> 
                   <SearchForm />
                 </div>
                 {totSubjectsFounded ? <Subjects /> : null}

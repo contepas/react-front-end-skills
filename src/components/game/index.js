@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Consumer} from '../Context';
 import GameBoard from './GameBoard';
 
 class Game extends Component {
@@ -10,12 +9,12 @@ class Game extends Component {
 
   generateCoins = max => {
     const order = this.generateRandomArray(6)
-    console.log(order)
     const coins = [];
+
     for (let i=0; i<max; i++){
       coins.push({name: order[i], isVisible: true})
     }
-    console.log(coins)
+
     return coins
   }
 
@@ -35,27 +34,23 @@ class Game extends Component {
     return newOrder
   }
 
-  
  
   render() {
     return (
-      <Consumer>
-      {() => {
-        return (
-          <React.Fragment>
-            <GameBoard 
-              coins = {this.generateCoins(6)}
-            />
-            <a 
-              href="https://contepas.github.io/four-in-a-row/" 
-              target="_blank"
-              rel="noopener noreferrer">Play 4 in a Row
-            </a>
-          </React.Fragment>
-        )
-      }}
-      </Consumer>
-    );
+      <div className="game-index">
+        <h3>Prendi i soldi nell'ordine corretto</h3>
+        <div className="game-container">
+          <GameBoard 
+            coins = {this.generateCoins(6)}
+          />
+        </div>
+        <a 
+          href="https://contepas.github.io/four-in-a-row/" 
+          target="_blank"
+          rel="noopener noreferrer">Play 4 in a Row
+        </a>
+      </div>          
+    )
   }
 }
 

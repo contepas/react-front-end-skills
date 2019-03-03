@@ -70,10 +70,14 @@ class GameBoard extends Component {
 
     render() {
         if(this.state.matches === 6) {
-            return <h1>you win!</h1>
+            return (
+                <React.Fragment>
+                    <h1>You win!</h1>
+                </React.Fragment>
+            )
         }
         return (
-            <div className="game-container">
+            <React.Fragment>
                 {this.props.coins.map((coin, index) => 
                     <Coin 
                     key={index}
@@ -82,7 +86,7 @@ class GameBoard extends Component {
                     //reset= {this.state.reset}
                     getCoin={() => this.getCoin(coin)} 
                     />)}        
-            </div>
+            </React.Fragment>
         );
     }
 }

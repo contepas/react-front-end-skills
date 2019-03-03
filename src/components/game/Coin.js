@@ -18,7 +18,7 @@ class Coin extends Component {
         return (
             <ImgCoin 
             value={this.id}
-            className={"imgcoin"}
+            className={"imgcoin boy"}
             src={coin} 
             alt="Coin"
             pose={this.props.isVisible ? 'open' : 'closed'}

@@ -18,14 +18,27 @@
 @import 'styles/base/reset',
         'styles/base/base';
 
-// Layout Styles
-@import 'styles/layout/base';
 
+// ======================================
+//  Components
 
-// Component Styles
-//@import 'components/category/name',
+// ======================================
+//  Header
+// ======================================
 
+@import 'styles/components/header';
 
+// ======================================
+//  Course-Finder
+// ======================================
+
+@import 'styles/components/course-finder';
+
+// ======================================
+//  Game
+// ======================================
+
+@import 'styles/components/game';
 
 
 // body {
@@ -42,3 +55,4 @@
 //   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 //     monospace;
 // }
+

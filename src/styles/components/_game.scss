@@ -1,0 +1,33 @@
+// ======================================
+//  Game Component Styles
+// ======================================
+
+.game-container {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    img {
+      align-self: center;
+    }
+  }
+  
+  .imgcoin {
+  
+    cursor: pointer;
+  }
+
+@keyframes jump {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(360deg);}
+}
+
+.boy {
+    animation: jump 5s steps(50, end) infinite;
+}
+.boy:hover {
+    animation: none;
+}
+
+.game-index {
+    text-align: center;
+}
