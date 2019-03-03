@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Consumer} from '../Context';
 import Course from './Course';
 
-class Courses extends Component {
+export default class Courses extends Component {
  
     render() {
         return(
@@ -23,12 +23,10 @@ class Courses extends Component {
                                 </React.Fragment>
                             </div>
                         </div>
-                    )
+                    );
                 }    
                 }
             </Consumer>
-        )
+        );
     }
-}
-
-export default Courses
+};

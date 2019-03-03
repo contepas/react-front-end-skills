@@ -7,25 +7,23 @@ import Header from './components/Header';
 import NotFound from './components/NotFound';
 import ErrorBoudary from './components/ErrorBoundary';
 
-class App extends Component {
+export default class App extends Component {
   
-  render() {
-      return (
-        <HashRouter >
-          <div className="container">
-            <Header />
-            <Switch>
-              <ErrorBoudary>
-                <Route exact path="/" component={Home} />
-                <Route path="/course-finder" component={CourseFinder} />
-                <Route path="/play" component={Game} />
-              </ErrorBoudary>
-              <Route component={NotFound} />
-            </Switch>
-          </div>
-        </HashRouter>
-      )  
-  }
-}
-
-export default App;
+    render() {
+        return (
+            <HashRouter >
+            <div className="container">
+                <Header />
+                <Switch>
+                    <ErrorBoudary>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/course-finder" component={CourseFinder} />
+                        <Route path="/play" component={Game} />
+                    </ErrorBoudary>
+                    <Route component={NotFound} />
+                </Switch>
+            </div>
+            </HashRouter>
+        );
+    }
+};

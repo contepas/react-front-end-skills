@@ -8,7 +8,7 @@ const ImgCoin = posed.img({
     pressable: true,
     open: {opacity: 1},
     closed: {opacity: 0},
-  })
+})
 
   
 const Coin = props => (
