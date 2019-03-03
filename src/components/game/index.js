@@ -3,15 +3,6 @@ import GameBoard from './GameBoard';
 
 export default class Game extends Component {
 
-    state = {
-        reset: false
-    }
-
-    restartGame = (obj) => {
-        console.log('Ciao!!!!!')
-        this.forceUpdate();
-        //this.setState(prevState => ({reset: !prevState.reset}))
-    }
 
     generateCoins = max => {
         const order = this.generateRandomArray(6)
@@ -42,14 +33,12 @@ export default class Game extends Component {
 
     
     render() {
-        const coins = this.generateCoins(6);
         return (
             <div className="game-index">
                 <h3>Prendi i soldi nell'ordine corretto</h3>
                 <div className="game-container">
                     <GameBoard 
                         coins = {() => this.generateCoins(6)}
-                        //coins = {coins}
                         restart = {() => this.restartGame(this)}
                     />
                 </div>

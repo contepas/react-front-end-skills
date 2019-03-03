@@ -11,32 +11,27 @@ export default class GameBoard extends Component {
     }
 
     static propTypes = {
-        coins: PropTypes.arrayOf(PropTypes.shape({
-            isVisible: PropTypes.bool,
-            name: PropTypes.number
-        })),
+        coins: PropTypes.func
     };
 
 
     /**
-     * sets all states back to the origin
+     * @param {object} hard - bool
+     * if hard is true: reset visibility and applay new order
+     * else: reset visibility
      */
     restartGame = (hard) => {
-        if (!hard) {
-            this.setState(prevState => ({
+        this.setState(prevState => {
+            return ({
                 nextItem: null,
                 matches: 0,
-                coins: prevState.coins.map(
-                    coin => Object.assign(coin, { isVisible: true })
-                )
-            }));
-        } else{
-            this.setState(prevState => ({
-                nextItem: null,
-                matches: 0,
-                coins: this.props.coins()
-            }));
-        }
+                coins: !hard 
+                        ? prevState.coins.map(
+                            coin => Object.assign(coin, { isVisible: true })
+                            )
+                        : this.props.coins()
+            })
+        })
     }
 
 
