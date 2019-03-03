@@ -11,7 +11,7 @@ export default class GameBoard extends Component {
     }
 
     static propTypes = {
-        coins: PropTypes.func
+        coins: PropTypes.func.isRequired
     };
 
 
