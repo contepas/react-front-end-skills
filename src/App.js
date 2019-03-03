@@ -11,7 +11,7 @@ class App extends Component {
   
   render() {
       return (
-        <HashRouter basename="/react-front-end-skills">
+        <HashRouter >
           <div className="container">
             <Header />
             <Switch>
