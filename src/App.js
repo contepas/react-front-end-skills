@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter, Route, Switch} from 'react-router-dom';
+import { HashRouter, Route, Switch} from 'react-router-dom';
 import CourseFinder from './components/course-finder';
 import Home from './components/Home';
 import Game from './components/game';
@@ -11,7 +11,7 @@ class App extends Component {
   
   render() {
       return (
-        <BrowserRouter basename="/react-front-end-skills">
+        <HashRouter basename="/react-front-end-skills">
           <div className="container">
             <Header />
             <Switch>
@@ -23,7 +23,7 @@ class App extends Component {
               <Route component={NotFound} />
             </Switch>
           </div>
-        </BrowserRouter>
+        </HashRouter>
       )  
   }
 }
