@@ -11,7 +11,7 @@ class App extends Component {
   
   render() {
       return (
-        <BrowserRouter>
+        <BrowserRouter basename="/react-front-end-skills">
           <div className="container">
             <Header />
             <Switch>

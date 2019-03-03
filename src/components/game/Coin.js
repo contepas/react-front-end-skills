@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import posed from 'react-pose';
 import coin from '../../styles/svg/moneta-0.svg';
+import PropTypes from 'prop-types';
 
 
 const ImgCoin = posed.img({
@@ -23,10 +24,15 @@ class Coin extends Component {
             alt="Coin"
             pose={this.props.isVisible ? 'open' : 'closed'}
             onClick={this.props.getCoin}
-            //onClick={() => this.setState({isVisible: false})}
         />
         )
     }   
+};
+
+Coin.propTypes = {
+    id: PropTypes.number,
+    isVisible: PropTypes.bool,
+    getCoin: PropTypes.func
 };
 
 export default Coin;

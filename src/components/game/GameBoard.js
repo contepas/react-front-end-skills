@@ -33,36 +33,53 @@ class GameBoard extends Component {
             )
         }));
     }
-
-    checkForGoodMove = (id) => {
+    
+    checkForGoodMove = id => {
         let nextItem = this.state.nextItem;
-        if (nextItem){
-            //If we got already the first coin
-            if (id === nextItem){
-                //If we got the next coin in the right order
-                this.setState(prevState => {
-                    nextItem = (nextItem %6) + 1;
-                    return {
-                        nextItem: nextItem,
-                        matches: prevState.matches +1,
-                    }
-                })
-            } else {
-                //We didn't get the right order
-                //restart game;
-                this.restartGame();
-                return false;
-            }
+        if ((id !== nextItem) && nextItem) {
+            this.restartGame();
+            return false;
         } else {
-            //Got first coin
             this.setState(prevState => {
+                nextItem = (id %6) + 1;
                 return {
-                    nextItem: id +1,
+                    nextItem: nextItem,
                     matches: prevState.matches +1,
                 }
             })
         }
-      }
+    }
+
+    // checkForGoodMove2 = (id) => {
+    //     let nextItem = this.state.nextItem;
+    //     if (nextItem){
+    //         //If we got already the first coin
+    //         if (id === nextItem){
+    //             //If we got the next coin in the right order
+    //             this.setState(prevState => {
+    //                 nextItem = (nextItem %6) + 1;
+    //                 return {
+    //                     nextItem: nextItem,
+    //                     matches: prevState.matches +1,
+    //                 }
+    //             })
+    //         } else {
+    //             //We didn't get the right order
+    //             //restart game;
+    //             this.restartGame();
+    //             return false;
+    //         }
+    //     } else {
+    //         //Got first coin
+    //         this.setState(prevState => {
+    //             nextItem = (id %6) + 1;
+    //             return {
+    //                 nextItem: nextItem,
+    //                 matches: prevState.matches +1,
+    //             }
+    //         })
+    //     }
+    //   }
 
     render() {
         if(this.state.matches === 6) {
