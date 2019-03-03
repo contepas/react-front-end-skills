@@ -1,15 +1,15 @@
 {
-  "main.css": "/react-front-end-skills/static/css/main.b58ff089.chunk.css",
-  "main.js": "/react-front-end-skills/static/js/main.1ea22ce6.chunk.js",
-  "main.js.map": "/react-front-end-skills/static/js/main.1ea22ce6.chunk.js.map",
-  "runtime~main.js": "/react-front-end-skills/static/js/runtime~main.8ea3e708.js",
-  "runtime~main.js.map": "/react-front-end-skills/static/js/runtime~main.8ea3e708.js.map",
-  "static/js/2.eec332de.chunk.js": "/react-front-end-skills/static/js/2.eec332de.chunk.js",
-  "static/js/2.eec332de.chunk.js.map": "/react-front-end-skills/static/js/2.eec332de.chunk.js.map",
-  "index.html": "/react-front-end-skills/index.html",
-  "precache-manifest.74e89f8af2eced16e5438c8b055155a5.js": "/react-front-end-skills/precache-manifest.74e89f8af2eced16e5438c8b055155a5.js",
-  "service-worker.js": "/react-front-end-skills/service-worker.js",
-  "static/css/main.b58ff089.chunk.css.map": "/react-front-end-skills/static/css/main.b58ff089.chunk.css.map",
-  "static/media/logo.svg": "/react-front-end-skills/static/media/logo.b39e6a8c.svg",
-  "static/media/moneta-0.svg": "/react-front-end-skills/static/media/moneta-0.5459900e.svg"
+  "main.css": "/static/css/main.b58ff089.chunk.css",
+  "main.js": "/static/js/main.87817a24.chunk.js",
+  "main.js.map": "/static/js/main.87817a24.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.fdfcfda2.js",
+  "runtime~main.js.map": "/static/js/runtime~main.fdfcfda2.js.map",
+  "static/js/2.eec332de.chunk.js": "/static/js/2.eec332de.chunk.js",
+  "static/js/2.eec332de.chunk.js.map": "/static/js/2.eec332de.chunk.js.map",
+  "index.html": "/index.html",
+  "precache-manifest.cbd34f9eae7a1fb036379b2d0f434966.js": "/precache-manifest.cbd34f9eae7a1fb036379b2d0f434966.js",
+  "service-worker.js": "/service-worker.js",
+  "static/css/main.b58ff089.chunk.css.map": "/static/css/main.b58ff089.chunk.css.map",
+  "static/media/logo.svg": "/static/media/logo.b39e6a8c.svg",
+  "static/media/moneta-0.svg": "/static/media/moneta-0.5459900e.svg"
 }
