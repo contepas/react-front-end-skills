@@ -25,7 +25,7 @@ class Coin extends Component {
             pose={this.props.isVisible ? 'open' : 'closed'}
             onClick={this.props.getCoin}
         />
-        )
+        );
     }   
 };
 
