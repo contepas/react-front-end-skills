@@ -10,7 +10,22 @@ export default class GameBoard extends Component {
         coins: this.props.coins
     }
 
-    getCoin = (coin) => {
+    static propTypes = {
+        coins: PropTypes.arrayOf(PropTypes.shape({
+            isVisible: PropTypes.bool,
+            name: PropTypes.number
+        })),
+    };
+
+
+    /**
+     * @param {object} coin - name: number, isVisible: bool
+     * If the coin is visible on the screen:
+     *      set the visibility of coin in coins to False
+     *      then calls the function to check if the coin pressed
+     *      was in the right order
+     */
+    getCoin = coin => {
         if (!coin.isVisible) {
             return false
         }
@@ -25,6 +40,10 @@ export default class GameBoard extends Component {
         this.checkForGoodMove(coin.name)
     }
 
+
+    /**
+     * sets all states back to the origin
+     */
     restartGame = () => {
         this.setState(prevState => ({
             nextItem: null,
@@ -35,6 +54,15 @@ export default class GameBoard extends Component {
         }));
     }
 
+
+    /**
+     * @param {number} id - name of the coin
+     * If the id is the next number in the line:
+     *      set nextItem to the next number in the line
+     *      and add 1 to matches
+     * else:
+     *      call restartGame function
+     */
     checkForGoodMove = id => {
         let nextItem = this.state.nextItem;
         if ((id !== nextItem) && nextItem) {
@@ -55,9 +83,10 @@ export default class GameBoard extends Component {
     render() {
         if(this.state.matches === 6) {
             return (
-                <React.Fragment>
+                <div className="you-win">
                     <h1>You win!</h1>
-                </React.Fragment>
+                    <button onClick={this.restartGame}>Restart</button>
+                </div>
             )
         }
         return (
@@ -72,11 +101,4 @@ export default class GameBoard extends Component {
             </React.Fragment>
         );
     }
-};
-
-GameBoard.propTypes = {
-    coins: PropTypes.arrayOf(PropTypes.shape({
-        isVisible: PropTypes.bool,
-        name: PropTypes.number
-    })),
 };

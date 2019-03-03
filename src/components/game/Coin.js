@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import posed from 'react-pose';
 import coin from '../../styles/svg/moneta-0.svg';
-import PropTypes from 'prop-types';
 
 
 const ImgCoin = posed.img({
@@ -10,24 +10,17 @@ const ImgCoin = posed.img({
     closed: {opacity: 0},
   })
 
-class Coin extends Component {
-    state = {
-        id: this.props.id,
-    }
-    
-    render() {
-        return (
-            <ImgCoin 
-            value={this.id}
-            className={"imgcoin boy"}
-            src={coin} 
-            alt="Coin"
-            pose={this.props.isVisible ? 'open' : 'closed'}
-            onClick={this.props.getCoin}
-        />
-        );
-    }   
-};
+  
+const Coin = props => (
+    <ImgCoin 
+        className={"imgcoin boy"}
+        src={coin} 
+        alt="Coin"
+        pose={props.isVisible ? 'open' : 'closed'}
+        onClick={props.getCoin}
+    />
+);
+
 
 Coin.propTypes = {
     id: PropTypes.number,
