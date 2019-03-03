@@ -2,7 +2,7 @@
   "name": "course-finder",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://contepas.github.io/react-front-end-skills",
+  "homepage": "https://pasqualeconte.dev",
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.8.2",
